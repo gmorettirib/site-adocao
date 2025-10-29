@@ -1,0 +1,19 @@
+nav {
+  background-color: #1c0b2b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+a {
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+}
