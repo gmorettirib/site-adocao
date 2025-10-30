@@ -1,11 +1,11 @@
 import Header from './components/menuHome.tsx';
+import HomePage from './components/home.tsx';
 
 function App() {
   return (
     <>
     <Header></Header>
-      <h1>Olá, React com Vite 👋</h1>
-      <p>Meu projeto começa aqui!</p>
+    <HomePage></HomePage>
     </>
   )
 }

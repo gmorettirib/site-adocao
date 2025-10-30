@@ -3,25 +3,26 @@ import "../styles/menuHome.css";
 export default function Header() {
   return (
     <header>
-      <nav>
-        <ol>
-          <a href="#">ADOCÃO</a>
-        </ol>
-        <ul>
-          <ol>
-            <a href="#">SOBRE O PROJETO</a>
-          </ol>
-          <ol>
-            <a href="#">ADOTAR</a>
-          </ol>
-          <ol>
-            <a href="#">CADASTRAR-SE</a>
-          </ol>
-          <ol>
-            <a href="#">LOGIN</a>
-          </ol>
-        </ul>
-      </nav>
-    </header>
+      
+          <nav>
+            <li className="logo_adocao">
+              <a href="#">ADOCÃO</a>
+            </li>
+            <ul className="lista_menu">
+              <li>
+                <a href="#">SOBRE O PROJETO</a>
+              </li>
+              <li>
+                <a href="#">ADOTAR</a>
+              </li>
+              <li>
+                <a href="#">LOGIN</a>
+              </li>
+              <li>
+                <a href="#">CADASTRAR-SE</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
   );
 }
