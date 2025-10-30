@@ -1,12 +1,72 @@
-body{
-    background-color: #A587CD;
+body {
+  background-color: #a587cd;
 }
 
-img{
-    width: 10%;
+main {
+  margin-top: 5%;
 }
 
-.card{
-    background-color: #c598f0;
-    border-radius: 20px;
+img {
+  width: 30%;
+}
+
+.card {
+  background-color: #d1b2ee;
+  border-radius: 20px;
+  display: flex;
+}
+
+.txt_direita {
+  float: right;
+  font-size: 1.3rem;
+}
+
+.lista_animais {
+  margin: auto;
+}
+
+.sem_bolinha {
+  list-style-type: none;
+  text-align: start;
+  margin-left: 0px;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.sem_bolinha li::before {
+  content: "-";
+  margin-right: 5%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.divisor {
+  width: 1px;
+  transform: scaleX(0.2);
+  height: 1;
+  background-color: purple;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.ultimas_adocoes_usuarios {
+  width: 25%;
+}
+
+.titulo_home {
+  text-align: left;
+  width: 80%;
+  color: #f8dbff;
+  font-weight: bold;
+  margin-bottom: 2.5%;
+  font-size: 4rem;
+  width: 120%;
+}
+
+.subtitulo_home{
+  text-align: left;
+  color: #000;
+  font-weight:bold ;
+  font-size: 2.3rem;
+  margin-bottom: 7%;
 }

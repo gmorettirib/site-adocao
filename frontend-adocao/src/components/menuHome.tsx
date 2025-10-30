@@ -5,22 +5,22 @@ export default function Header() {
     <header>
       
           <nav>
-            <ol>
+            <li className="logo_adocao">
               <a href="#">ADOCÃO</a>
-            </ol>
-            <ul>
-              <ol>
+            </li>
+            <ul className="lista_menu">
+              <li>
                 <a href="#">SOBRE O PROJETO</a>
-              </ol>
-              <ol>
+              </li>
+              <li>
                 <a href="#">ADOTAR</a>
-              </ol>
-              <ol>
+              </li>
+              <li>
                 <a href="#">LOGIN</a>
-              </ol>
-              <ol>
+              </li>
+              <li>
                 <a href="#">CADASTRAR-SE</a>
-              </ol>
+              </li>
             </ul>
           </nav>
         </header>
