@@ -17,7 +17,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20%;
+    padding: 0 20%;
 }
 
 
@@ -66,7 +66,7 @@ h1{
 }
 
 .ques:hover{
-    background-color: #7a3eca;
+    background-color: #773bc6;
 }
 
 .ans {
@@ -74,6 +74,10 @@ h1{
     width: 100%;
     overflow: hidden;
     transition: max-height .3s ease-in-out;
+}
+
+.faq i{
+    transition: all .3s ease-in-out;
 }
 
 .faq-list{
@@ -86,6 +90,10 @@ h1{
 
 .faq.active .ans{
     max-height: 300px;
+}
+
+.faq.active i{
+    transform: rotate(45deg);
 }
 
 .ans p{
