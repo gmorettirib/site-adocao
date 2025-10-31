@@ -14,11 +14,7 @@ img {
   background-color: #d1b2ee;
   border-radius: 20px;
   display: flex;
-}
-
-.txt_direita {
-  float: right;
-  font-size: 1.3rem;
+  padding: 10px;
 }
 
 .lista_animais {
@@ -56,17 +52,60 @@ img {
 .titulo_home {
   text-align: left;
   width: 80%;
-  color: #f8dbff;
+  color: #eee4f0;
   font-weight: bold;
   margin-bottom: 2.5%;
   font-size: 4rem;
   width: 120%;
 }
 
-.subtitulo_home{
+.subtitulo_home {
   text-align: left;
-  color: #000;
-  font-weight:bold ;
+  font-weight: bold;
   font-size: 2.3rem;
   margin-bottom: 7%;
+}
+
+.titulo_box_homepage {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.subtitulo_box_homepage {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.pets_adotados {
+  display: flex;
+  align-items: center;
+}
+
+.icon_cachorro {
+  width: 100%;
+  margin: 10px;
+}
+
+.txt_direita {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.img_perfis_menu img {
+  border-radius: 100%;
+}
+
+.casa-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.casa-icon img {
+  width: 100%;
+  margin-left: 10rem;
 }

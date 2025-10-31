@@ -1,10 +1,10 @@
-import "../styles/home.css";
+import "../../styles/HomePage/HomeContent.css";
 
-export default function HomePage() {
+export default function HomeContent() {
   return (
     <body>
       <main>
-        <div className="container text-center">
+        <div className="container">
           <div className="row">
             <div className="col ">
               <h1 className="titulo_home">ENCONTRE SEU COMPANHEIRO HOJE</h1>
@@ -15,13 +15,21 @@ export default function HomePage() {
               <div className="card">
                 <div className="row">
                   <div className="col">
-                    <h3>PETS ADOTADOS</h3>
-                    <div>
-                      <img src="/img/cachorro1.png" alt="" />
-                      <p className="txt_direita">X HOJE</p>
+                    <h3 className="titulo_box_homepage">PETS ADOTADOS</h3>
+                    <div className="row pets_adotados">
+                      <div className="col">
+                        <img
+                          src="img/cachorro-icon-home.png"
+                          alt="icon-cachorro"
+                          className="icon_cachorro"
+                        />
+                      </div>
+                      <div className="col">
+                        <p className="txt_direita">X HOJE</p>
+                      </div>
                     </div>
-                    <h3>Ultimas adoções</h3>
-                    <div>
+                    <h3 className="subtitulo_box_homepage">Ultimas adoções</h3>
+                    <div className="img_perfis_menu">
                       <img
                         src="/img/cachorro1.png"
                         alt=""
@@ -51,18 +59,17 @@ export default function HomePage() {
                       <li>CACHORRO</li>
                       <li>PÁSSARO</li>
                       <li>ROEDOR</li>
-                      <li>E MUITO MAIS</li>
+                      <li>E MUITO MAIS!!!</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col">
-              <div className="img">
-                <img src="/img/cachorro1.png" alt="" />
-              </div>
+            <div className="col casa-icon">
+              <img src="img/casa-home.png" alt="" />
             </div>
           </div>
+          <div></div>
         </div>
       </main>
     </body>
