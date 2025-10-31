@@ -62,7 +62,7 @@ h1{
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    transition: all .3 ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .ques:hover{
@@ -73,10 +73,16 @@ h1{
     max-height: 0px;
     width: 100%;
     overflow: hidden;
-    transition: max-height .3 ease-in-out;
+    transition: max-height .3s ease-in-out;
 }
 
-.faq
+.faq-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .faq.active .ans{
     max-height: 300px;
