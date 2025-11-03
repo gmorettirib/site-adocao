@@ -64,7 +64,7 @@ a {
     box-shadow: 0 6px 20px rgba(28, 11, 43, 0.5);
     width: 100%;
     max-width: 550px;
-    margin-top: 140px;
+    margin-top: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,14 +74,15 @@ a {
     text-align: center;
     margin-bottom: 30px;
     color: #F8DBFF;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 form {
+    align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 20px;
+    gap: 15px;
 }
 
 label {
@@ -89,7 +90,7 @@ label {
 }
 
 input {
-    padding: 14px;
+    padding: 3%;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -105,10 +106,10 @@ input::placeholder {
 button {
     background-color: #9975C7;
     color: #F8DBFF;
-    padding: 14px;
+    padding: 3%;
     border: none;
     border-radius: 10px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: 0.3s;
     width: 100%;
