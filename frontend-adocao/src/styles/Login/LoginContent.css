@@ -50,3 +50,17 @@ button {
 button:hover {
   background-color: #b179e0;
 }
+
+.nao-tem-conta{
+  margin-top: 5%;
+}
+
+.p-cadastre-se{
+  margin-bottom: 0;
+  color: #e8c8f4;
+}
+
+.cadastra-se{
+  text-decoration: none;
+  color: #fff;
+}

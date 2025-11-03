@@ -1,21 +1,21 @@
-import "../../styles/Menu.css";
+import "../../styles/CadastraUsuario/CadastraUsuario.css";
 
 export default function CadastraUsuarioMenu() {
   return (
     <header>
       <nav>
         <li className="logo_adocao">
-          <a href="#">ADOCÃO</a>
+          <a className="menu" href="/">ADOCÃO</a>
         </li>
         <ul className="lista_menu">
           <li>
-            <a href="#">SOBRE O PROJETO</a>
+            <a className="menu" href="#">SOBRE O PROJETO</a>
           </li>
           <li>
-            <a href="#">ADOTAR</a>
+            <a className="menu" href="#">ADOTAR</a>
           </li>
           <li>
-            <a href="#">LOGIN</a>
+            <a className="menu" href="/login">LOGIN</a>
           </li>
         </ul>
       </nav>

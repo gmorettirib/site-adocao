@@ -18,10 +18,11 @@ export default function LoginContent() {
         <h2 className="titulo-login">FAÇA SEU LOGIN</h2>
         <div>
           <form action="processa_login.php" method="POST">
-            
-            <label htmlFor="Cpf" className="form-label">CPF:</label>
+            <label htmlFor="Cpf" className="form-label">
+              CPF:
+            </label>
             <input
-            className="form-control"
+              className="form-control"
               type="text"
               id="cpf"
               name="cpf"
@@ -32,9 +33,11 @@ export default function LoginContent() {
               onChange={handleCpfChange}
             />
 
-            <label htmlFor="Senha" className="form-label">Senha:</label>
+            <label htmlFor="Senha" className="form-label">
+              Senha:
+            </label>
             <input
-            className="form-control"
+              className="form-control"
               type="password"
               id="senha"
               name="senha"
@@ -43,6 +46,12 @@ export default function LoginContent() {
             />
             <button type="submit">FAZER LOGIN</button>
           </form>
+          <div className="nao-tem-conta">
+            <p className="p-cadastre-se">Não possui conta?</p>
+            <a href="/cadastra" className="cadastra-se">
+              CADASTRE-SE
+            </a>
+          </div>
         </div>
       </section>
     </main>

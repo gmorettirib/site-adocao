@@ -117,7 +117,6 @@ export default function CadastraUsuarioContent() {
                 id="cep"
                 name="cep"
                 maxLength={9}
-                placeholder="CEP"
                 required
                 value={cep}
                 onChange={(e) => setCep(formatarCEP(e.target.value))}
