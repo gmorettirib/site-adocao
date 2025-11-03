@@ -26,6 +26,15 @@ header {
     font-weight: 600;
 }
 
+header .logo img {
+    width: 10%;
+    margin: 0 25%;
+}
+
+header .menu {
+    margin: 0 10%;
+}
+
 h3 {
     font-size: 30px;
     padding-bottom: 30px;
