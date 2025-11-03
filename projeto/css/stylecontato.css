@@ -1,12 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #A587CD;
+body {
+    background-color: #9975C7;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -35,14 +36,87 @@ header .menu {
     margin: 0 10%;
 }
 
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 3%;
+    color: #F8DBFF;
+}
+
 h3 {
     font-size: 30px;
     padding-bottom: 30px;
     padding-top: 30px;
 }
-a{
+
+a {
     margin-right: 30px;
     outline: none;
     color: white;
     text-decoration: none;
 }
+
+/*=================INICIO FORMS+====================================*/
+.form-container {
+    background-color: #1C0B2B;
+    padding: 3.5%;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(28, 11, 43, 0.5);
+    width: 100%;
+    max-width: 550px;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #F8DBFF;
+    font-size: 1.6rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+label {
+    font-size: 1rem;
+}
+
+input {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    color: #1C0B2B;
+    width: 100%;
+}
+
+input::placeholder {
+    color: #8a6faf;
+}
+
+button {
+    background-color: #9975C7;
+    color: #F8DBFF;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #7c5fa3;
+}
+
+/*=================INICIO FORMS+====================================*/
+
