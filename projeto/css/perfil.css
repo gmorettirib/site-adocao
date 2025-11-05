@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("../img/fundo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1C0B2B;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+.bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.perfil-card {
+  background-color: #732dd9;
+  border-radius: 16px;
+  padding: 40px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.titulo {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+
+.perfil-form label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.perfil-form input {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #333;
+}
+
+.perfil-form .campo-duplo {
+  display: flex;
+  gap: 20px;
+}
+
+.perfil-form .file-input {
+  background-color: white;
+  padding: 8px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+}
+
+.btn-salvar {
+  background-color: #d6b0ff;
+  color: #2c0066;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-salvar:hover {
+  background-color: #c28aff;
+}
+
+.btn-cancelar {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 24px;
+  padding: 10px 24px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+.campo-duplo {
+  display: flex;
+  gap: 24px;
+}
+
+.campo-duplo .campo-nome {
+  flex: 2; /* deixa o campo de nome o dobro do tamanho */
+}
+
+.campo-duplo div:not(.campo-nome) {
+  flex: 1;
+}

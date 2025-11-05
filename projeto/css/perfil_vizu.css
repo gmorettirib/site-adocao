@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("../img/fundo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1C0B2B;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+}
+
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.perfil-card {  background-color: #732dd9;
+;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.foto-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.nome-usuario {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info-container p {
+  margin: 8px 0;
+}
+
+.botoes {
+  margin-top: 30px;
+}
+
+.btn-editar,
+.btn-sair {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+  transition: background 0.3s;
+}
+
+.btn-editar:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-sair {
+  background-color: #ef4444;
+}
+
+.btn-sair:hover {
+  background-color: #dc2626;
+}
