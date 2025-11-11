@@ -1,0 +1,114 @@
+body {
+  background-color: #a587cd;
+}
+
+main {
+  margin-top: 5%;
+  height: 600px;
+}
+
+
+
+img {
+  width: 30%;
+}
+
+.card {
+  background-color: #d1b2ee;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+}
+
+.lista_animais {
+  margin: auto;
+}
+
+.sem_bolinha {
+  list-style-type: none;
+  text-align: start;
+  margin-left: 0px;
+  padding: 0;
+  font-size: 1.3rem;
+}
+
+.sem_bolinha li::before {
+  content: "-";
+  margin-right: 5%;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.divisor {
+  width: 1px;
+  transform: scaleX(0.2);
+  height: 1;
+  background-color: purple;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.ultimas_adocoes_usuarios {
+  width: 25%;
+}
+
+.titulo_home {
+  text-align: left;
+  width: 80%;
+  color: #eee4f0;
+  font-weight: bold;
+  margin-bottom: 2.5%;
+  font-size: 4rem;
+  width: 120%;
+}
+
+.subtitulo_home {
+  text-align: left;
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin-bottom: 7%;
+}
+
+.titulo_box_homepage {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.subtitulo_box_homepage {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.pets_adotados {
+  display: flex;
+  align-items: center;
+}
+
+.icon_cachorro {
+  width: 100%;
+  margin: 10px;
+}
+
+.txt_direita {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.img_perfis_menu img {
+  border-radius: 100%;
+}
+
+.casa-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.casa-icon img {
+  width: 100%;
+  margin-left: 10rem;
+}
