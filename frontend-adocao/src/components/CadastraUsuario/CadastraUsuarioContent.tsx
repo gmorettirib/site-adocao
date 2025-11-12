@@ -2,12 +2,12 @@ import "../../styles/CadastraUsuario/CadastraUsuario.css";
 import { useState } from "react";
 
 export default function CadastraUsuarioContent() {
-  // estados para armazenar e formatar os valores
+
   const [cpf, setCpf] = useState("");
   const [telefone, setTelefone] = useState("");
   const [cep, setCep] = useState("");
 
-  // Funções de formatação
+
   function formatarCPF(value: string) {
     value = value.replace(/\D/g, "");
     value = value.replace(/(\d{3})(\d)/, "$1.$2");

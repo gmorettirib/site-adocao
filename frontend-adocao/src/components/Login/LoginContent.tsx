@@ -48,7 +48,7 @@ export default function LoginContent() {
           </form>
           <div className="nao-tem-conta">
             <p className="p-cadastre-se">Não possui conta?</p>
-            <a href="/cadastra" className="cadastra-se">
+            <a href="/cadastraUsuario" className="cadastra-se">
               CADASTRE-SE
             </a>
           </div>
