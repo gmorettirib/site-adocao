@@ -1,3 +1,4 @@
+import "../../styles/CadastraUsuario/CadastraUsuario.css";
 
 export default function CadastraPetMenu() {
   return (
