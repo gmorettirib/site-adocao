@@ -1,13 +1,8 @@
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #fff;
-}
-
-body{
-    overflow-x: hidden;
 }
 
 .container {
@@ -19,34 +14,6 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 0 20%;
-}
-
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1C0B2B;
-    color: white;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 25px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-
-a{
-    margin-right: 30px;
-    outline: none;
-    color: white;
-    text-decoration: none;
 }
 
 h1{
@@ -63,7 +30,6 @@ h1{
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    border-radius: 15px;
     transition: all .3s ease-in-out;
 }
 
@@ -72,10 +38,9 @@ h1{
 }
 
 .ans {
-    max-height: 0px;
+    /* max-height: 0px; */
     width: 100%;
     overflow: hidden;
-    border-radius: 15px;
     transition: max-height .3s ease-in-out;
 }
 
@@ -106,3 +71,4 @@ h1{
     border-top: 1px solid #230051;
     
 }
+

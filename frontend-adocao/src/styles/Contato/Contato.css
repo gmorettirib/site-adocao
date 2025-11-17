@@ -1,4 +1,59 @@
-/*=================INICIO FORMS+====================================*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  background-color: #a587cd;
+  display: flex;
+  flex-direction: column; /* Adicionando flexbox ao body */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ajuste para garantir o preenchimento completo */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1C0B2B;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+
+a{
+  margin-right: 30px;
+  outline: none;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*=================INICIO FORMS+====================================-*/
 .form-container {
   background-color: #6b3b8c;
   padding: 20px;
@@ -9,9 +64,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   width: 50%;
   position: absolute;
   top: 150px;
+=======
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px; /* Limitar a largura máxima do formulário */
+  margin: 20px; /* Adiciona uma margem ao redor do formulário */
+>>>>>>> 805af28ba4ced7301160ef863297cd483e7a013b
 }
 
 .form-container h2 {
@@ -22,11 +85,12 @@
 }
 
 form {
-  align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
@@ -48,7 +112,7 @@ input::placeholder {
 }
 
 button {
-  background-color: #9975c7;
+  background-color: #b984ff;
   color: #f8dbff;
   padding: 3%;
   border: none;
@@ -60,7 +124,7 @@ button {
 }
 
 button:hover {
-  background-color: #7c5fa3;
+  background-color: #a967ff;
 }
 
 
