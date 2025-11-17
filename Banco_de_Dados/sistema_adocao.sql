@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15/10/2025 às 20:00
+-- Tempo de geração: 17/11/2025 às 21:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -99,10 +99,26 @@ CREATE TABLE `usuario` (
   `data_nasc` date DEFAULT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `cep` varchar(9) DEFAULT NULL,
-  `telefone` varchar(9) DEFAULT NULL,
+  `telefone` varchar(11) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
-  `cpf` varchar(11) NOT NULL
+  `cpf` varchar(11) NOT NULL,
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `usuario`
+--
+
+INSERT INTO `usuario` (`qtd_anim_registado`, `qtd_adotados`, `data_nasc`, `nome`, `cep`, `telefone`, `email`, `cpf`, `senha`) VALUES
+(NULL, NULL, '2025-11-25', 'Joazinho', '77777777', '777777777', 'teste@gmail.com', '00000000000', '$2y$10$nTTnQkrODFqyZD.7ndLwFuv4hYtafiGeM0F9AE3ifmeB1XfZBhk82'),
+(NULL, NULL, '1969-04-26', 'Maria Aparecida Diogo', '09380330', '119606484', 'Cida@gmail.com', '10770225810', '$2y$10$AOLYG5pSAzftOwWNk1ePueJ9TWTuLSYmW72aUCLBboY1LIEqPPgU6'),
+(NULL, NULL, '2025-10-29', 'joazin', '12312312', '23123123213', 'jao@gmail.com', '12312312312', '$2y$10$oUBhhCGb0pXGRKXIEscwbO.yjjvcaOS/QvF5MihTwhnCP9gTsNsOW'),
+(NULL, NULL, '2025-10-07', 'Daniel Diogo De Souza', '123312', '119800042', 'dan.diogosouza765@gmail.com', '12345678910', '$2y$10$8c1pqH4ZwZBa.lIBWXAX8uDWA'),
+(NULL, NULL, '2025-09-29', 'maria', '09371000', '119100020', 'maria@gmail.com', '12345678980', '$2y$10$0DKBKgA3APt7Lj3qemgDmej7U'),
+(NULL, NULL, '2025-10-01', 'Felipe', '09371000', '119767547', 'fefe@gmail.com', '42398023850', '$2y$10$RsZvZX4FBk0JWhr6EKpMteDtJ'),
+(NULL, NULL, '2025-10-02', 'Daniel', '00000000', '111111111', 'daniel@gmail.com', '44444444444', '$2y$10$gijeIbsrSMpnxzV2XsCVDOgHdCY7w0ExgC8WSFSJ/PZu57nzSfM02'),
+(NULL, NULL, '2007-04-12', 'Joao Vitor Macedo Goncalves', '00000001', '195852431', 'joao21@gmail.com', '55555555555', '$2y$10$Rs8SsPOYlqmh.7EGWqOwjOPagRn11g5FUWAThzKrXoPeRCsIs8Eha'),
+(NULL, NULL, '2025-10-01', 'lucas', '55555555', '777777777', 'lucas@gmail.com', '88888888888', '$2y$10$8SHfLyWwC/lcngEurV6LwOoLl89TFU700auSzuGTNABTOG5Uvq8dm');
 
 -- --------------------------------------------------------
 
