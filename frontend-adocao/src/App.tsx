@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import CadastraUsuario from "./pages/CadastraUsuario";
 import CadastraPet from "./pages/CadastraPet";
 import Contato from "./pages/Contato";
+import Faq from "./pages/Faq";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/cadastraUsuario" element={<CadastraUsuario/>}></Route>
         <Route path="/cadastraPet" element={<CadastraPet/>}></Route>
         <Route path="/contato" element={<Contato/>}></Route>
+        <Route path="/faq" element={<Faq/>}></Route>
       </Routes>
     </Router>
   );
