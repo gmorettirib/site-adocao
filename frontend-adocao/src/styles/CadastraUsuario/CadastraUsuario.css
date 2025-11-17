@@ -1,7 +1,8 @@
-main {
+.cadastro-main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 7% 0%;
 }
 
 .cadastro-container {
@@ -13,65 +14,47 @@ main {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-.cadastro-container h2 {
+.cadastro-titulo {
   text-align: left;
   color: #e8c8f4;
   font-size: 3rem;
   margin-bottom: 25px;
 }
 
-form {
+.cadastro-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.linha {
+.cadastro-linha {
   display: flex;
   justify-content: space-between;
   gap: 15px;
 }
 
-.campo {
+.cadastro-campo {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-label {
+.cadastro-label {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 5px;
 }
 
-input {
+.cadastro-input {
   padding: 10px;
   border: none;
   border-radius: 6px;
   outline: none;
   font-size: 0.9em;
+  color: black;
 }
 
-.foto-btn {
-  background-color: #d2a8ff;
-  border: none;
-  border-radius: 20px;
-  padding: 10px;
-  color: #2b153f;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.foto-btn:hover {
-  background-color: #b179e0;
-}
-
-.botao {
-  justify-content: flex-end;
-}
-
-button[type="submit"] {
+.cadastro-button {
   background-color: #d2a8ff;
   color: #2b153f;
   border: none;
@@ -82,6 +65,16 @@ button[type="submit"] {
   transition: 0.3s;
 }
 
-button[type="submit"]:hover {
+.cadastro-button:hover {
   background-color: #b179e0;
+}
+
+.cadastro-botao {
+  justify-content: flex-end;
+}
+
+.cadastro-mensagem {
+  color: #ffdfdf;
+  font-weight: bold;
+  margin-top: 15px;
 }

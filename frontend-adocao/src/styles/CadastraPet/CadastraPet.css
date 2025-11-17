@@ -1,32 +1,89 @@
-section {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-  width: 25%;
-}
-
-input[type="text"],
-input[type="number"] {
-  transition: all 0.2s ease;
-  background-color: #fff;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus {
-  outline: 2px solid #d8b4fe;
-  background-color: #fff;
-}
-
-.castrado-input {
-  margin: 0.01%;
-  padding: 1%;
-}
-
-.foto-pet {
-  transition: all 0.2s ease;
-  background-color: #fff;
-}
-
-.castrado-options {
+.cadastro-pet-main {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  margin: 5% 0;
 }
 
+.cadastro-pet-container {
+  background-color: #6b3b8c;
+  padding: 35px;
+  border-radius: 15px;
+  width: 850px;
+  color: #f0d9ff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro-pet-titulo {
+  font-size: 2.5rem;
+  color: #e8c8f4;
+  margin-bottom: 25px;
+}
+
+.cadastro-pet-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cadastro-pet-linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.cadastro-pet-campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastro-pet-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cadastro-pet-input,
+.cadastro-pet-foto {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.cadastro-pet-input:focus,
+.cadastro-pet-foto:focus {
+  outline: 2px solid #d8b4fe;
+}
+
+.cadastro-pet-castrado-options {
+  display: flex;
+  gap: 20px;
+}
+
+.cadastro-pet-castrado-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cadastro-pet-botao {
+  justify-content: flex-end;
+}
+
+.cadastro-pet-button {
+  background-color: #d2a8ff;
+  color: #2b153f;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cadastro-pet-button:hover {
+  background-color: #b179e0;
+}

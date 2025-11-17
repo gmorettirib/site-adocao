@@ -1,4 +1,4 @@
-import CadastraPetMenu from "../components/CadastroPet/CadastraPetMenu";
+import CadastraPetMenu from "../components/CadastraPet/CadastraPetMenu";
 import ContatoContent from "../components/Contato/ContatoContent";
 
 function Contato() {

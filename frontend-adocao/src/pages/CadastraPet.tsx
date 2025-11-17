@@ -1,7 +1,7 @@
-import CadastraPetMenu from "../components/CadastroPet/CadastraPetMenu";
-import CadastraPetContent from "../components/CadastroPet/CadastraPetContent";
+import CadastraPetMenu from "../components/CadastraPet/CadastraPetMenu";
+import CadastraPetContent from "../components/CadastraPet/CadastraPetContent";
 
-function CadastraUsuario() {
+function CadastraPet() {
   return (
     <>
       <CadastraPetMenu />
@@ -10,4 +10,4 @@ function CadastraUsuario() {
   );
 }
 
-export default CadastraUsuario;
+export default CadastraPet;

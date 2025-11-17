@@ -32,7 +32,7 @@ export default function LoginContent() {
       formData.append("cpf", cpf.replace(/\D/g, ""));
       formData.append("senha", senha);
 
-      const response = await fetch("http://localhost/site-adocao_semREACT/API/processa_login.php", {
+      const response = await fetch("http://localhost/site-adocao/API/processa_login.php", {
   method: "POST",
   headers: {
     "Content-Type": "application/x-www-form-urlencoded",
@@ -92,7 +92,7 @@ export default function LoginContent() {
 
         <div className="nao-tem-conta">
           <p className="p-cadastre-se">Não possui conta?</p>
-          <a href="/cadastra" className="cadastra-se">CADASTRE-SE</a>
+          <a href="/cadastraUsuario" className="cadastra-se">CADASTRE-SE</a>
         </div>
       </section>
     </main>

@@ -1,105 +1,129 @@
-body {
+.home-main {
+  width: 100%;
   background-color: #a587cd;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3% 10%;
 }
 
-main {
-  margin-top: 5%;
-  height: 600px;
+.home-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-
-
-img {
-  width: 30%;
+.home-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.card {
+.home-col {
+  flex: 1;
+}
+
+.text-section {
+  max-width: 65%;
+}
+
+.home-titulo {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #eee4f0;
+  margin-bottom: 1rem;
+}
+
+.home-subtitulo {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.home-card {
   background-color: #d1b2ee;
   border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-card-row {
   display: flex;
-  padding: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.lista_animais {
-  margin: auto;
+.home-card-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-.sem_bolinha {
-  list-style-type: none;
-  text-align: start;
-  margin-left: 0px;
-  padding: 0;
-  font-size: 1.3rem;
-}
-
-.sem_bolinha li::before {
-  content: "-";
-  margin-right: 5%;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.divisor {
-  width: 1px;
-  transform: scaleX(0.2);
-  height: 1;
-  background-color: purple;
-  border-radius: 4px;
-  margin: 10px 0;
-}
-
-.ultimas_adocoes_usuarios {
-  width: 25%;
-}
-
-.titulo_home {
-  text-align: left;
-  width: 80%;
-  color: #eee4f0;
+.home-card-titulo {
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2.5%;
-  font-size: 4rem;
-  width: 120%;
+  margin-bottom: 0.5rem;
 }
 
-.subtitulo_home {
-  text-align: left;
-  font-weight: bold;
-  font-size: 2.3rem;
-  margin-bottom: 7%;
-}
-
-.titulo_box_homepage {
-  text-align: left;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding: 10px;
-}
-
-.subtitulo_box_homepage {
-  text-align: left;
-  font-weight: bold;
+.home-card-subtitulo {
   font-size: 1rem;
-  padding: 10px;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.pets_adotados {
+.home-pets-adotados {
   display: flex;
   align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 1rem;
 }
 
-.icon_cachorro {
-  width: 100%;
-  margin: 10px;
+.home-icon-cachorro {
+  width: 50%;
 }
 
-.txt_direita {
-  font-size: 1.9rem;
+.home-txt-direita {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-.img_perfis_menu img {
-  border-radius: 100%;
+.home-img-perfis-menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-ultimas-adocoes {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.home-divisor {
+  width: 1px;
+  background-color: purple;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+.lista-animais {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.home-sem-bolinha {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: start;
+}
+
+.home-sem-bolinha li::before {
+  content: "-";
+  margin-right: 10px;
 }
 
 .casa-icon {
@@ -109,6 +133,6 @@ img {
 }
 
 .casa-icon img {
-  width: 100%;
-  margin-left: 10rem;
+  max-width: 100%;
+  height: auto;
 }

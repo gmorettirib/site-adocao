@@ -35,7 +35,15 @@ export default function CadastraUsuarioContent() {
   const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!nome || !senha || !dataNascimento || !cpf || !telefone || !email || !cep) {
+    if (
+      !nome ||
+      !senha ||
+      !dataNascimento ||
+      !cpf ||
+      !telefone ||
+      !email ||
+      !cep
+    ) {
       setMensagem("Preencha todos os campos!");
       return;
     }
@@ -50,13 +58,15 @@ export default function CadastraUsuarioContent() {
       formData.append("email", email);
       formData.append("cep", cep.replace(/\D/g, ""));
 
-      const response = await fetch("http://localhost/site-adocao_semREACT/API/processa_registro.php", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "http://localhost/site-adocao/API/processa_registro.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
-
       setMensagem(data.message || "Erro ao cadastrar.");
     } catch (error) {
       setMensagem("Erro na conexão com o servidor.");
@@ -65,13 +75,15 @@ export default function CadastraUsuarioContent() {
   };
 
   return (
-    <main>
+    <main className="cadastro-main">
       <section className="cadastro-container">
-        <h2>CADASTRE-SE!</h2>
-        <form onSubmit={handleRegister}>
-          <div className="linha">
-            <div className="campo">
-              <label htmlFor="nome">Nome:</label>
+        <h2 className="cadastro-titulo">CADASTRE-SE!</h2>
+        <form className="cadastro-form" onSubmit={handleRegister}>
+          <div className="cadastro-linha">
+            <div className="cadastro-campo">
+              <label htmlFor="nome" className="cadastro-label">
+                Nome:
+              </label>
               <input
                 type="text"
                 id="nome"
@@ -80,11 +92,14 @@ export default function CadastraUsuarioContent() {
                 required
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
+                className="cadastro-input"
               />
             </div>
 
-            <div className="campo">
-              <label htmlFor="senha">Senha:</label>
+            <div className="cadastro-campo">
+              <label htmlFor="senha" className="cadastro-label">
+                Senha:
+              </label>
               <input
                 type="password"
                 id="senha"
@@ -93,11 +108,14 @@ export default function CadastraUsuarioContent() {
                 required
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
+                className="cadastro-input"
               />
             </div>
 
-            <div className="campo">
-              <label htmlFor="data">Data de Nascimento:</label>
+            <div className="cadastro-campo">
+              <label htmlFor="data" className="cadastro-label">
+                Data de Nascimento:
+              </label>
               <input
                 type="date"
                 id="data"
@@ -105,13 +123,16 @@ export default function CadastraUsuarioContent() {
                 required
                 value={dataNascimento}
                 onChange={(e) => setDataNascimento(e.target.value)}
+                className="cadastro-input"
               />
             </div>
           </div>
 
-          <div className="linha">
-            <div className="campo">
-              <label htmlFor="cpf">CPF:</label>
+          <div className="cadastro-linha">
+            <div className="cadastro-campo">
+              <label htmlFor="cpf" className="cadastro-label">
+                CPF:
+              </label>
               <input
                 type="text"
                 id="cpf"
@@ -121,11 +142,14 @@ export default function CadastraUsuarioContent() {
                 required
                 value={cpf}
                 onChange={(e) => setCpf(formatarCPF(e.target.value))}
+                className="cadastro-input"
               />
             </div>
 
-            <div className="campo">
-              <label htmlFor="telefone">Telefone:</label>
+            <div className="cadastro-campo">
+              <label htmlFor="telefone" className="cadastro-label">
+                Telefone:
+              </label>
               <input
                 type="tel"
                 id="telefone"
@@ -135,11 +159,14 @@ export default function CadastraUsuarioContent() {
                 required
                 value={telefone}
                 onChange={(e) => setTelefone(formatarTelefone(e.target.value))}
+                className="cadastro-input"
               />
             </div>
 
-            <div className="campo">
-              <label htmlFor="email">Email:</label>
+            <div className="cadastro-campo">
+              <label htmlFor="email" className="cadastro-label">
+                Email:
+              </label>
               <input
                 type="email"
                 id="email"
@@ -148,13 +175,16 @@ export default function CadastraUsuarioContent() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="cadastro-input"
               />
             </div>
           </div>
 
-          <div className="linha">
-            <div className="campo">
-              <label htmlFor="cep">CEP:</label>
+          <div className="cadastro-linha">
+            <div className="cadastro-campo">
+              <label htmlFor="cep" className="cadastro-label">
+                CEP:
+              </label>
               <input
                 type="text"
                 id="cep"
@@ -163,17 +193,18 @@ export default function CadastraUsuarioContent() {
                 required
                 value={cep}
                 onChange={(e) => setCep(formatarCEP(e.target.value))}
+                className="cadastro-input"
               />
             </div>
           </div>
 
-          <div className="linha botao">
-            <button type="submit" id="submit">
+          <div className="cadastro-linha cadastro-botao">
+            <button type="submit" className="cadastro-button">
               CRIAR CONTA
             </button>
           </div>
 
-          {mensagem && <p className="mensagem">{mensagem}</p>}
+          {mensagem && <p className="cadastro-mensagem">{mensagem}</p>}
         </form>
       </section>
     </main>
