@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #f5c7ff, #c59bff, #9c6df7);
+    min-height: 100vh;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(28, 11, 43, 0.85);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(61, 14, 104, 0.4);
+    color: #ffebff;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffdcff;
+    margin-left: 25px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: #ffd0f7;
+    text-shadow: 0px 0px 8px #ff9ff3;
+}
+
+/* ========================= CARDS CONTAINER ========================= */
+.cards-container {
+    max-width: 1100px;
+    padding: 40px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ========================= CARD ========================= */
+.card {
+    background: linear-gradient(145deg, #a770ef, #cf8efc);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(93, 33, 134, 0.4);
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(93, 33, 134, 0.6);
+}
+
+/* ========================= FAVORITE BUTTON (estrela) ========================= */
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    transition: 0.2s ease;
+    color: #ffe4ff;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.star {
+    font-size: 32px;
+    transition: 0.3s ease-in-out;
+}
+
+/*=====================ESTRELA FAVORITA===========================*/
+.favorite-btn .star {
+    font-size: 32px;
+    color: #ffe4ff;
+    transition: 0.3s ease-in-out;
+}
+
+/* quando favoritar */
+.favorite-btn.active .star {
+    color: #ffd900;
+    text-shadow: 0 0 10px #ffcc00,
+                 0 0 20px #ffea74,
+                 0 0 30px #ffea74;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+/* ========================= IMAGEM ========================= */
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 12px rgba(79, 20, 130, 0.35);
+}
+
+/* ========================= TÍTULO ========================= */
+.card h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 6px rgba(255, 209, 255, 0.7);
+}
+
+/* ========================= BOTÃO CONTATO ========================= */
+.contact-btn {
+    background: #ff8de3;
+    border: none;
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.contact-btn:hover {
+    background: #ff6fdc;
+    transform: scale(1.03);
+    box-shadow: 0 0 12px rgba(255, 135, 235, 0.7);
+}
