@@ -2,11 +2,14 @@ import "../../styles/CadastraUsuario/CadastraUsuario.css";
 import { useState } from "react";
 
 export default function CadastraUsuarioContent() {
-
+  const [nome, setNome] = useState("");
+  const [senha, setSenha] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
   const [cpf, setCpf] = useState("");
   const [telefone, setTelefone] = useState("");
+  const [email, setEmail] = useState("");
   const [cep, setCep] = useState("");
-
+  const [mensagem, setMensagem] = useState("");
 
   function formatarCPF(value: string) {
     value = value.replace(/\D/g, "");
@@ -29,11 +32,43 @@ export default function CadastraUsuarioContent() {
     return value;
   }
 
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!nome || !senha || !dataNascimento || !cpf || !telefone || !email || !cep) {
+      setMensagem("Preencha todos os campos!");
+      return;
+    }
+
+    try {
+      const formData = new URLSearchParams();
+      formData.append("nome", nome);
+      formData.append("senha", senha);
+      formData.append("data", dataNascimento);
+      formData.append("cpf", cpf.replace(/\D/g, ""));
+      formData.append("telefone", telefone.replace(/\D/g, ""));
+      formData.append("email", email);
+      formData.append("cep", cep.replace(/\D/g, ""));
+
+      const response = await fetch("http://localhost/site-adocao_semREACT/API/processa_registro.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      setMensagem(data.message || "Erro ao cadastrar.");
+    } catch (error) {
+      setMensagem("Erro na conexão com o servidor.");
+      console.error(error);
+    }
+  };
+
   return (
     <main>
       <section className="cadastro-container">
         <h2>CADASTRE-SE!</h2>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form onSubmit={handleRegister}>
           <div className="linha">
             <div className="campo">
               <label htmlFor="nome">Nome:</label>
@@ -43,6 +78,8 @@ export default function CadastraUsuarioContent() {
                 name="nome"
                 placeholder="Nome Completo"
                 required
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
               />
             </div>
 
@@ -54,6 +91,8 @@ export default function CadastraUsuarioContent() {
                 name="senha"
                 placeholder="Senha"
                 required
+                value={senha}
+                onChange={(e) => setSenha(e.target.value)}
               />
             </div>
 
@@ -64,6 +103,8 @@ export default function CadastraUsuarioContent() {
                 id="data"
                 name="data"
                 required
+                value={dataNascimento}
+                onChange={(e) => setDataNascimento(e.target.value)}
               />
             </div>
           </div>
@@ -105,6 +146,8 @@ export default function CadastraUsuarioContent() {
                 name="email"
                 placeholder="Email"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -129,6 +172,8 @@ export default function CadastraUsuarioContent() {
               CRIAR CONTA
             </button>
           </div>
+
+          {mensagem && <p className="mensagem">{mensagem}</p>}
         </form>
       </section>
     </main>
