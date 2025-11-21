@@ -1,11 +1,11 @@
 import Menu from "../components/Menu/Menu.tsx";
-import HomeContent from "../components/HomePage/HomeContent.tsx";
+import Perfil from "../components/Perfil/Perfil.tsx";
 
 function HomePage() {
   return (
     <>
       <Menu></Menu>
-      <HomeContent></HomeContent>
+      <Perfil></Perfil>
     </>
   );
 }

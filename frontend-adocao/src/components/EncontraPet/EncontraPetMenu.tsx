@@ -1,3 +1,5 @@
+import "./EncontraPet.css";
+
 export default function EncontraPetMenu() {
     return (
       <header>

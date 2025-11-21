@@ -1,62 +1,84 @@
-import "../../styles/CadastraUsuario/CadastraUsuario.css";
 import { useState } from "react";
+import "./CadastraUsuario.css";
 
 export default function CadastraUsuarioContent() {
-  const [nome, setNome] = useState("");
-  const [senha, setSenha] = useState("");
-  const [dataNascimento, setDataNascimento] = useState("");
-  const [cpf, setCpf] = useState("");
-  const [telefone, setTelefone] = useState("");
-  const [email, setEmail] = useState("");
-  const [cep, setCep] = useState("");
+  const [form, setForm] = useState({
+    nome: "",
+    senha: "",
+    dataNascimento: "",
+    cpf: "",
+    telefone: "",
+    email: "",
+    cep: "",
+  });
+
   const [mensagem, setMensagem] = useState("");
 
+  // -----------------------------
+  // FORMATADORES
+  // -----------------------------
+
   function formatarCPF(value: string) {
-    value = value.replace(/\D/g, "");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d)/, "$1.$2");
-    value = value.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
-    return value;
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d{1,2})$/, "$1-$2");
   }
 
   function formatarTelefone(value: string) {
-    value = value.replace(/\D/g, "");
-    value = value.replace(/^(\d{2})(\d)/, "($1) $2");
-    value = value.replace(/(\d{5})(\d)/, "$1-$2");
-    return value;
+    return value
+      .replace(/\D/g, "")
+      .replace(/^(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1-$2");
   }
 
   function formatarCEP(value: string) {
-    value = value.replace(/\D/g, "");
-    value = value.replace(/^(\d{5})(\d)/, "$1-$2");
-    return value;
+    return value.replace(/\D/g, "").replace(/^(\d{5})(\d)/, "$1-$2");
   }
 
-  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+  // -----------------------------
+  // HANDLERS DE INPUT
+  // -----------------------------
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+
+    let formattedValue = value;
+
+    if (name === "cpf") formattedValue = formatarCPF(value);
+    if (name === "telefone") formattedValue = formatarTelefone(value);
+    if (name === "cep") formattedValue = formatarCEP(value);
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: formattedValue,
+    }));
+  }
+
+  // -----------------------------
+  // SUBMIT
+  // -----------------------------
+
+  async function handleRegister(e: React.FormEvent) {
     e.preventDefault();
 
-    if (
-      !nome ||
-      !senha ||
-      !dataNascimento ||
-      !cpf ||
-      !telefone ||
-      !email ||
-      !cep
-    ) {
+    const camposVazios = Object.values(form).some((v) => v.trim() === "");
+
+    if (camposVazios) {
       setMensagem("Preencha todos os campos!");
       return;
     }
 
     try {
       const formData = new URLSearchParams();
-      formData.append("nome", nome);
-      formData.append("senha", senha);
-      formData.append("data", dataNascimento);
-      formData.append("cpf", cpf.replace(/\D/g, ""));
-      formData.append("telefone", telefone.replace(/\D/g, ""));
-      formData.append("email", email);
-      formData.append("cep", cep.replace(/\D/g, ""));
+      formData.append("nome", form.nome);
+      formData.append("senha", form.senha);
+      formData.append("data", form.dataNascimento);
+      formData.append("cpf", form.cpf.replace(/\D/g, ""));
+      formData.append("telefone", form.telefone.replace(/\D/g, ""));
+      formData.append("email", form.email);
+      formData.append("cep", form.cep.replace(/\D/g, ""));
 
       const response = await fetch(
         "http://localhost/site-adocao/API/processa_registro.php",
@@ -69,16 +91,22 @@ export default function CadastraUsuarioContent() {
       const data = await response.json();
       setMensagem(data.message || "Erro ao cadastrar.");
     } catch (error) {
-      setMensagem("Erro na conexão com o servidor.");
       console.error(error);
+      setMensagem("Erro na conexão com o servidor.");
     }
-  };
+  }
+
+  // -----------------------------
+  // JSX PRINCIPAL
+  // -----------------------------
 
   return (
     <main className="cadastro-main">
       <section className="cadastro-container">
         <h2 className="cadastro-titulo">CADASTRE-SE!</h2>
+
         <form className="cadastro-form" onSubmit={handleRegister}>
+          {/* LINHA 1 */}
           <div className="cadastro-linha">
             <div className="cadastro-campo">
               <label htmlFor="nome" className="cadastro-label">
@@ -90,8 +118,8 @@ export default function CadastraUsuarioContent() {
                 name="nome"
                 placeholder="Nome Completo"
                 required
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
+                value={form.nome}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
@@ -104,30 +132,30 @@ export default function CadastraUsuarioContent() {
                 type="password"
                 id="senha"
                 name="senha"
-                placeholder="Senha"
                 required
-                value={senha}
-                onChange={(e) => setSenha(e.target.value)}
+                value={form.senha}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
 
             <div className="cadastro-campo">
-              <label htmlFor="data" className="cadastro-label">
+              <label htmlFor="dataNascimento" className="cadastro-label">
                 Data de Nascimento:
               </label>
               <input
                 type="date"
-                id="data"
-                name="data"
+                id="dataNascimento"
+                name="dataNascimento"
                 required
-                value={dataNascimento}
-                onChange={(e) => setDataNascimento(e.target.value)}
+                value={form.dataNascimento}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
           </div>
 
+          {/* LINHA 2 */}
           <div className="cadastro-linha">
             <div className="cadastro-campo">
               <label htmlFor="cpf" className="cadastro-label">
@@ -138,10 +166,9 @@ export default function CadastraUsuarioContent() {
                 id="cpf"
                 name="cpf"
                 maxLength={14}
-                placeholder="Seu CPF"
                 required
-                value={cpf}
-                onChange={(e) => setCpf(formatarCPF(e.target.value))}
+                value={form.cpf}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
@@ -155,10 +182,9 @@ export default function CadastraUsuarioContent() {
                 id="telefone"
                 name="telefone"
                 maxLength={15}
-                placeholder="Telefone"
                 required
-                value={telefone}
-                onChange={(e) => setTelefone(formatarTelefone(e.target.value))}
+                value={form.telefone}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
@@ -171,15 +197,15 @@ export default function CadastraUsuarioContent() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email"
                 required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={form.email}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
           </div>
 
+          {/* LINHA 3 */}
           <div className="cadastro-linha">
             <div className="cadastro-campo">
               <label htmlFor="cep" className="cadastro-label">
@@ -191,13 +217,14 @@ export default function CadastraUsuarioContent() {
                 name="cep"
                 maxLength={9}
                 required
-                value={cep}
-                onChange={(e) => setCep(formatarCEP(e.target.value))}
+                value={form.cep}
+                onChange={handleChange}
                 className="cadastro-input"
               />
             </div>
           </div>
 
+          {/* BOTÃO */}
           <div className="cadastro-linha cadastro-botao">
             <button type="submit" className="cadastro-button">
               CRIAR CONTA

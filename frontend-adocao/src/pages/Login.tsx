@@ -1,10 +1,10 @@
+import Menu from "../components/Menu/Menu";
 import LoginContent from "../components/Login/LoginContent";
-import LoginMenu from "../components/Login/LoginMenu";
 
 function Login() {
   return (
     <>
-      <LoginMenu />
+      <Menu />
       <LoginContent />
     </>
   );

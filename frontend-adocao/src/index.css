@@ -18,3 +18,10 @@ html body {
   width: 100%;
   min-height: 100vh;
 }
+
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #eee4f0;
+  margin-bottom: 1rem;
+}

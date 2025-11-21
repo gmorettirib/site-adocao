@@ -1,10 +1,10 @@
+import Menu from "../components/Menu/Menu";
 import CadastraUsuarioContent from "../components/CadastraUsuario/CadastraUsuarioContent";
-import CadastraUsuarioMenu from "../components/CadastraUsuario/CadastraUsuarioMenu";
 
 function CadastraUsuario() {
   return (
     <>
-      <CadastraUsuarioMenu />
+      <Menu />
       <CadastraUsuarioContent />
     </>
   );

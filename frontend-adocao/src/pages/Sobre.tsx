@@ -1,11 +1,11 @@
 import Menu from "../components/Menu/Menu.tsx";
-import HomeContent from "../components/HomePage/HomeContent.tsx";
+import Sobre from "../components/Sobre/Sobre.tsx";
 
 function HomePage() {
   return (
     <>
       <Menu></Menu>
-      <HomeContent></HomeContent>
+      <Sobre></Sobre>
     </>
   );
 }

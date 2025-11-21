@@ -1,6 +1,6 @@
-import "../../styles/CadastraUsuario/CadastraUsuario.css";
+import "./LoginContent.css";
 
-export default function CadastraUsuarioMenu() {
+export default function LoginMenu() {
   return (
     <header>
       <nav>
@@ -13,9 +13,6 @@ export default function CadastraUsuarioMenu() {
           </li>
           <li>
             <a className="menu" href="#">ADOTAR</a>
-          </li>
-          <li>
-            <a className="menu" href="/login">LOGIN</a>
           </li>
         </ul>
       </nav>

@@ -1,10 +1,10 @@
-import CadastraPetMenu from "../components/CadastraPet/CadastraPetMenu";
+import Menu from "../components/Menu/Menu";
 import CadastraPetContent from "../components/CadastraPet/CadastraPetContent";
 
 function CadastraPet() {
   return (
     <>
-      <CadastraPetMenu />
+      <Menu />
       <CadastraPetContent />
     </>
   );
